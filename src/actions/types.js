@@ -1,0 +1,1 @@
+export const REQUEST_SW_PEOPLE = 'REQUEST_SW_PEOPLE';
