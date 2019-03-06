@@ -15,7 +15,7 @@ tbody > tr:nth-of-type(4n + 1) {
 }
 
 tbody > tr:hover {
-  background: rgba(rebeccapurple, 0.3);
+  background: rgba(70,130,180,0.2);
   cursor: pointer;
 }
 .desc {
