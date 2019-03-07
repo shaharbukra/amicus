@@ -14,7 +14,7 @@ export class Layout extends Component {
     if (people.length === 0) {
       return <h2>No Results</h2>;
     } else {
-      return <ClickeTable />;
+      return <ClickeTable people={people} />;
     }
   }
 }

@@ -9,6 +9,7 @@ table {
   margin: 50px auto;
 }
 
+
 /* Zebra striping */
 tbody > tr:nth-of-type(4n + 1) {
   background: #eee;
@@ -18,6 +19,7 @@ tbody > tr:hover {
   background: rgba(70,130,180,0.2);
   cursor: pointer;
 }
+
 .desc {
   display: none;
 }
@@ -25,6 +27,9 @@ tbody > tr:hover {
 .row:active + .desc {
   background-color: white;
   display: table-row;
+}
+.selectedRow { 
+	background-color : red !important;
 }
 
 th {
@@ -41,6 +46,14 @@ th {
   font-size: 18px;
 }
 
+input {
+  transform: scale(1.5);
+  margin: 10px 5px;
+}
+
+td > .selectRow:checked {
+	background: red;
+}
 /* 
 Max width before this PARTICULAR table gets nasty
 This query will take effect for any screen smaller than 760px

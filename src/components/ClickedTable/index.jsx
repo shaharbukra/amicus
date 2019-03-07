@@ -5,7 +5,29 @@ import "./clickedTable.css";
 export class ClickedTable extends Component {
 
   render() {
-    
+    const peopleRows = Object.keys( this.props.people )
+            .map( igKey => {
+                const {name, gender, height,mass,hair_color,skin_color,eye_color,birth_year} = this.props.people[igKey]
+                return (
+                  <React.Fragment key={igKey}>
+                  <tr className="row" >
+                    <td data-column="Name">{name}</td>
+                    <td data-column="Gender">{gender}</td>
+                    <td data-column="Height">{height}</td>
+                    <td data-column="Birth Year">{birth_year}</td>
+                    <td data-column="Mass">{mass}</td>
+                    <td data-column="Hair Color">{hair_color}</td>
+                    <td data-column="Skin Color">{skin_color}</td>
+                  </tr>
+                  <tr className="desc" >
+                    <td colSpan="7">
+                     Eye Color : {eye_color}
+                    </td>
+                  </tr>
+                </React.Fragment>
+               );
+            } );
+            console.log(peopleRows);
     return (
       <div>
         <header>
@@ -15,58 +37,17 @@ export class ClickedTable extends Component {
           <table>
             <thead>
               <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Job Title</th>
-                <th>Twitter</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Height</th>
+                <th>Birth Year</th>
+                <th>Mass</th>
+                <th>Hair Color</th>
+                <th>Skin Color</th>
               </tr>
             </thead>
             <tbody>
-              <tr className="row">
-                <td data-column="First Name">James</td>
-                <td data-column="Last Name">Matman</td>
-                <td data-column="Job Title">Chief Sandwich Eater</td>
-                <td data-column="Twitter">@james</td>
-              </tr>
-              <tr className="desc">
-                <td colSpan="4">Desciption row 1</td>
-              </tr>
-              <tr className="row">
-                <td data-column="First Name">Andor</td>
-                <td data-column="Last Name">Nagy</td>
-                <td data-column="Job Title">Designer</td>
-                <td data-column="Twitter">@andornagy</td>
-              </tr>
-              <tr className="desc">
-                <td colSpan="4">Desciption row 2</td>
-              </tr>
-              <tr className="row">
-                <td data-column="First Name">Tamas</td>
-                <td data-column="Last Name">Biro</td>
-                <td data-column="Job Title">Game Tester</td>
-                <td data-column="Twitter">@tamas</td>
-              </tr>
-              <tr className="desc">
-                <td colSpan="4">Desciption row 3</td>
-              </tr>
-              <tr className="row">
-                <td data-column="First Name">Zoli</td>
-                <td data-column="Last Name">Mastah</td>
-                <td data-column="Job Title">Developer</td>
-                <td data-column="Twitter">@zoli</td>
-              </tr>
-              <tr className="desc">
-                <td colSpan="4">Desciption row 4</td>
-              </tr>
-              <tr className="row">
-                <td data-column="First Name">Szabi</td>
-                <td data-column="Last Name">Nagy</td>
-                <td data-column="Job Title">Chief Sandwich Eater</td>
-                <td data-column="Twitter">@szabi</td>
-              </tr>
-              <tr className="desc">
-                <td colSpan="4">Desciption row 5</td>
-              </tr>
+             {peopleRows}
             </tbody>
           </table>
         </main>

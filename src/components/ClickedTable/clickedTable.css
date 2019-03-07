@@ -18,6 +18,10 @@ tbody > tr:hover {
   background: rgba(70, 130, 180, 0.2);
   cursor: pointer;
 }
+.selectedRow {
+  background-color: rgba(70, 130, 180) !important;
+}
+
 .desc {
   display: none;
 }
@@ -105,7 +109,7 @@ th {
     /* Label the data */
     content: attr(data-column);
 
-    border-right: 1px solid #bbb;
+    /* border-right: 1px solid #bbb; */
     color: #000;
     font-weight: bold;
   }
