@@ -22,8 +22,13 @@ tbody > tr:hover {
   background-color: rgba(70, 130, 180) !important;
 }
 
+.selectedRow + .desc{
+  display: table-row;
+}
+
 .desc {
   display: none;
+  margin-bottom: 5px;
 }
 /*.row:hover + .desc,*/
 .row:active + .desc {
@@ -83,6 +88,9 @@ th {
     border: 1px solid #ccc;
     margin-bottom: 1em;
   }
+  .selectedRow + .desc{
+    display: contents;
+  }
 
   td {
     /* Behave  like a "row" */
@@ -93,8 +101,9 @@ th {
   }
   .desc > td {
     border: 1px solid #ddd;
-    padding-left: 5px;
+    /* padding-left: 5px; */
     margin-bottom: 1em;
+    padding-right: 0%;
   }
 
   td:before {
